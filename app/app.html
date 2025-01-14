@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Energy Dashboard</title>
+  <link rel="stylesheet" href="styles.scss">
+  <script src="app.ts"></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Energy Dashboard</h1>
+    <button id="theme-toggle" class="theme-toggle" onclick="WhiteDarkMode()">Switch to Dark Mode</button>
+  </header>
+  
+  <main class="main">
+    <section class="container">
+      <div class="card scrollable" id="historical-data">
+        <h2>Historical Data</h2>
+        <p>Loading historical data...</p>
+      </div>
+      <div class="card" id="individual-data">
+        <h2>Individual Data</h2>
+        <ul>
+          <li>PV Power: <span id="pv-power">Loading...</span></li>
+          <li>Total Yield: <span id="total-yield">Loading...</span></li>
+          <li>Battery Status: <span id="battery-status">Loading...</span></li>
+        </ul>
+      </div>
+      <div class="card" id="user-info">
+        <h2>User Information</h2>
+        <ul>
+          <li>Username: <span id="username">Loading...</span></li>
+          <li>Last Login: <span id="last-login">Loading...</span></li>
+        </ul>
+      </div>
+      <div class="card" id="connected-inverters">
+        <h2>Connected Inverters</h2>
+        <p>Loading...</p>
+      </div>
+      <div class="card" id="errors-logs">
+        <h2>Errors & Logs</h2>
+        <ul>
+          <li>Last Error: <span id="last-error">None</span></li>
+          <li>Error Count: <span id="error-count">0</span></li>
+          <li>Last Login: <span id="error-last-login">Loading...</span></li>
+        </ul>
+      </div>
+      <div class="card scrollable" id="energy-dashboard">
+        <h2>Energy Dashboard</h2>
+        <canvas id="energy-chart"></canvas>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2025 Solar Dashboard. All rights reserved.</p>
+  </footer>
+  <script src="app.ts"></script>
+</body>
+</html>
